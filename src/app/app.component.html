@@ -1,0 +1,22 @@
+<app-lifecycle-hooks [data]="'Initial Data'"></app-lifecycle-hooks>
+
+<app-parent></app-parent>
+<app-directive></app-directive>
+
+
+  <!-- <div *ngFor="let product of products">
+    <p [appProductDiscount] [price]="product.price" [discount]="product.discount"></p>
+    </div> -->
+
+
+<div *ngFor="let product of products">
+  <p
+    appProductDiscount
+    [price]="product.price"
+    [discount]="product.discount">
+  </p>
+</div>
+
+<app-createpipe></app-createpipe>
+
+<p>{{'angular'| reverse }}</p>

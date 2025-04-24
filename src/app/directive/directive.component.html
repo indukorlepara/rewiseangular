@@ -1,0 +1,14 @@
+<p *ngIf="isLoggedIn">Welcome back!</p>
+<ul>
+    <li *ngFor="let user of users">{{user}}</li>
+  </ul>
+  <div [ngSwitch]="status">
+    <p *ngSwitchCase=1>user active</p>
+    <p *ngSwitchCase=0>user deactive</p>
+    <p *ngSwitchDefault>unknown case</p>
+  </div>
+
+  <p [ngClass]="{ 'highlight': isImportant }" [ngStyle]="{'color': isImportant ? 'green' : 'red'}">class workinh</p>
+
+
+  

@@ -1,0 +1,14 @@
+<!-- src/app/lifecycle-hooks/lifecycle-hooks.component.html -->
+<div>
+    <h2>Lifecycle Hooks Demo</h2>
+    <div>
+      <button (click)="data = 'Updated Data'">Update Data</button>
+    </div>
+    <div>
+      <h3>Lifecycle Hook Logs</h3>
+      <ul>
+        <li *ngFor="let log of changesLog">{{ log }}</li>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,8 @@
+<div>
+    <h2>{{ title }}</h2>
+    <button (click)="changeData()">Change Data</button>
+    <app-child [data]="childData"></app-child>
+    <img [src]="imageUrl" width="10px" />
+  </div>
+  <input [(ngModel)]="username" />
+  <p>Welcome, {{ username }}</p>
