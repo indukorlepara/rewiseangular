@@ -1,0 +1,13 @@
+<h2>Reactive Form Example</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <input type="text" formControlName="name" >
+    <input type="email" formControlName="email">
+    <input type="password" formControlName="password">
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+<div *ngIf="submitted">
+    <h3>Submitted Data:</h3>
+    <p>Name: {{ form.value.name }}</p>
+    <p>Email: {{ form.value.email }}</p>
+    <p>Email: {{ form.value.password }}</p>
+  </div>
